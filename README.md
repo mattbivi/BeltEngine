@@ -18,8 +18,16 @@ sudo apt install \
   zlib1g-dev
 
 wget https://github.com/Autodrop3d/BeltEngine/raw/main/dist/belt-engine-0.1.3.tar.gz
+conda create -n beltengine python=3.9 --yes
+conda activate beltengine
 pip3 install ./belt-engine-0.1.3.tar.gz
 ```
+### Visualisation installation
+Visualisation (-v flag) relies on pyglet to function. You can check your current version of OpenGL via ```glxinfo | grep OpenGL```
+If you have OpenGL v3.3+ then you can install pyglet by ```pip3 install pyglet```
+Otherwise a specific version must be chosen. On my lenovo laptop with linux mint 22 I used ```pip3 install pyglet==1.5.27```
+
+
 
 ### Other OSs
 
