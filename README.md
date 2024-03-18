@@ -26,7 +26,8 @@ pip3 install ./belt-engine-0.1.3.tar.gz
 Visualisation (-v flag) relies on pyglet to function. You can check your current version of OpenGL via ```glxinfo | grep OpenGL```
 If you have OpenGL v3.3+ then you can install pyglet by ```pip3 install pyglet```
 Otherwise a specific version must be chosen. On my lenovo laptop with linux mint 22 I used ```pip3 install pyglet==1.5.27```
-
+Furthermore, I still had troubles due to a broken linker. This was solved in this [stack overflow](https://stackoverflow.com/questions/71010343/cannot-load-swrast-and-iris-drivers-in-fedora-35/72200748#72200748) by:
+``` export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libstdc++.so.6 ```
 
 
 ### Other OSs
